@@ -1,26 +1,21 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.2.5",
-  "description": "A sample Node.js app using Express 4",
-  "engines": {
-    "node": "5.9.1"
-  },
-  "main": "index.js",
+  "name": "movietime",
+  "version": "1.0.0",
+  "description": "MovieTime bot",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
+  "engines": {
+    "node": "7.7.3"
+  },
+  "author": "Khalid Zn",
+  "license": "ISC",
   "dependencies": {
-    "ejs": "2.4.1",
-    "express": "4.13.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
-  },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "license": "MIT"
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.0",
+    "request": "^2.81.0"
+  }
 }
