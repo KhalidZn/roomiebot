@@ -40,7 +40,7 @@ app.post("/webhook", function (req, res) {
                 if (event.postback) {
                     processPostback(event);
                 } else if (event.message) {
-                    processPostback(event);
+                    processMessage(event);
                 }
             });
         });
