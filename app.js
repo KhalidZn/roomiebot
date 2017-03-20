@@ -95,12 +95,7 @@ function processPostback(event) {
                             "type":"postback",
                             "title":"Director",
                             "payload":"director"
-                        } ,{
-                            "type":"web_url",
-                            "url":"https://petersapparel.parseapp.com",
-                            "title":"Show Website"
                         }
-
                     ]
                 }
             }
