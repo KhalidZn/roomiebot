@@ -91,19 +91,7 @@ function processPostback(event) {
                             "type":"postback",
                             "title":"Cast",
                             "payload":"cast"
-                        }, {
-                            "type":"postback",
-                            "title":"Director",
-                            "payload":"director"
-                        }, {
-                            "type":"postback",
-                            "title":"Runtime",
-                            "payload":"runtime"
-                        }, {
-                            "type":"postback",
-                            "title":"Plot",
-                            "payload":"plot"
-                        },
+                        }
 
                     ]
                 }
