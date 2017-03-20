@@ -99,11 +99,6 @@ function processPostback(event) {
                             "type":"web_url",
                             "url":"https://petersapparel.parseapp.com",
                             "title":"Show Website"
-                        },
-                        {
-                            "type":"postback",
-                            "title":"Start Chatting",
-                            "payload":"USER_DEFINED_PAYLOAD"
                         }
 
                     ]
