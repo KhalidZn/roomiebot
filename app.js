@@ -86,16 +86,23 @@ function processPostback(event) {
                         {
                             "type":"postback",
                             "title":"Rating",
-                            "payload":"rat"
-                        },
-                        {
-                            "type":"postback",
-                            "title":"Start Chatting",
-                            "payload":"USER_DEFINED_PAYLOAD"
+                            "payload":"Rating"
                         },{
                             "type":"postback",
                             "title":"Cast",
-                            "payload":"cast"
+                            "payload":"Cast"
+                        },{
+                            "type":"postback",
+                            "title":"Director",
+                            "payload":"Director"
+                        },{
+                            "type":"postback",
+                            "title":"Date",
+                            "payload":"Date"
+                        },{
+                            "type":"postback",
+                            "title":"Runtime",
+                            "payload":"Runtime"
                         }
                     ]
                 }
