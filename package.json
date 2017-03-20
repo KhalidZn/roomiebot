@@ -2,10 +2,10 @@
   "name": "movietime",
   "version": "1.0.0",
   "description": "MovieTime bot",
-  "main": "test.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node test.js"
+    "start": "node app.js"
   },
   "engines": {
     "node": "7.7.3"
