@@ -96,10 +96,6 @@ function processPostback(event) {
                             "type":"postback",
                             "title":"Cast",
                             "payload":"cast"
-                        },{
-                            "type":"postback",
-                            "title":"Date",
-                            "payload":"date"
                         }
                     ]
                 }
