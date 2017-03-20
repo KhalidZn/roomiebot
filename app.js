@@ -95,15 +95,11 @@ function processPostback(event) {
                         },{
                             "type":"postback",
                             "title":"Cast",
-                            "payload":"rat"
+                            "payload":"cast"
                         },{
                             "type":"postback",
-                            "title":"Cast",
-                            "payload":"rat"
-                        },{
-                            "type":"postback",
-                            "title":"Cast",
-                            "payload":"rat"
+                            "title":"Date",
+                            "payload":"date"
                         }
                     ]
                 }
