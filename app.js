@@ -85,23 +85,23 @@ function processPostback(event) {
                     "buttons":[
                         {
                             "type":"postback",
-                            "title":"Rating",
+                            "title":"rating",
                             "payload":"Rating"
                         },{
                             "type":"postback",
-                            "title":"Cast",
+                            "title":"cast",
                             "payload":"Cast"
                         },{
                             "type":"postback",
-                            "title":"Director",
+                            "title":"director",
                             "payload":"Director"
                         },{
                             "type":"postback",
-                            "title":"Date",
+                            "title":"date",
                             "payload":"Date"
                         },{
                             "type":"postback",
-                            "title":"Runtime",
+                            "title":"runtime",
                             "payload":"Runtime"
                         }
                     ]
