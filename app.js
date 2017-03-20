@@ -91,22 +91,7 @@ function processPostback(event) {
                             type: "postback",
                             title: "Rating",
                             payload: "Incorrect"
-                        }, {
-                            type: "postback",
-                            title: "Cast",
-                            payload: "Cast"
-                        }, {
-                            type: "postback",
-                            title: "Director",
-                            payload: "Director"
-                        }, {
-                            type: "postback",
-                            title: "Date",
-                            payload: "Date"
-                        }, {
-                            type: "postback",
-                            title: "Runtime",
-                            payload: "Runtime"
+
                         }]
                     }]
                 }
