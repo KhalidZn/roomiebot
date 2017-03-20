@@ -85,24 +85,25 @@ function processPostback(event) {
                     "buttons":[
                         {
                             "type":"postback",
-                            "title":"rating",
-                            "payload":"Rating"
+                            "title":"Rating",
+                            "payload":"rat"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"Start Chatting",
+                            "payload":"USER_DEFINED_PAYLOAD"
                         },{
                             "type":"postback",
-                            "title":"cast",
-                            "payload":"Cast"
+                            "title":"Cast",
+                            "payload":"rat"
                         },{
                             "type":"postback",
-                            "title":"director",
-                            "payload":"Director"
+                            "title":"Cast",
+                            "payload":"rat"
                         },{
                             "type":"postback",
-                            "title":"date",
-                            "payload":"Date"
-                        },{
-                            "type":"postback",
-                            "title":"runtime",
-                            "payload":"Runtime"
+                            "title":"Cast",
+                            "payload":"rat"
                         }
                     ]
                 }
