@@ -97,10 +97,6 @@ function processPostback(event) {
                             "payload":"director"
                         }, {
                             "type":"postback",
-                            "title":"Date",
-                            "payload":"date"
-                        }, {
-                            "type":"postback",
                             "title":"Runtime",
                             "payload":"runtime"
                         }, {
