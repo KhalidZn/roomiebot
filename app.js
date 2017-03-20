@@ -79,41 +79,27 @@ function processPostback(event) {
 
 
         message = {
-            attachment: {
-                type: "template",
-                payload: {
-                    template_type: "generic",
-                    text:"Awesome! What would you like to find out?",
-                    elements: [{
-                        buttons: [{
-                            type: "postback",
-                            title: "Plot",
-                            payload: "Plot"
-                        }, {
-                            type: "postback",
-                            title: "Rating",
-                            payload: "Incorrect"
-                        }, {
-                            type: "postback",
-                            title: "Cast",
-                            payload: "Cast"
-                        }, {
-                            type: "postback",
-                            title: "Director",
-                            payload: "Director"
-                        }, {
-                            type: "postback",
-                            title: "Date",
-                            payload: "Date"
-                        }, {
-                            type: "postback",
-                            title: "Runtime",
-                            payload: "Runtime"
-                        }]
-                    }]
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"What do you want to do next?",
+                    "buttons":[
+                        {
+                            "type":"web_url",
+                            "url":"https://petersapparel.parseapp.com",
+                            "title":"Show Website"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"Start Chatting",
+                            "payload":"USER_DEFINED_PAYLOAD"
+                        }
+                    ]
                 }
             }
         };
+
         sendMessage(senderId, message);
     } else if (payload === "Incorrect") {
         sendMessage(senderId, {text: "Oops! Sorry about that. Try using the exact title of the movie"});
