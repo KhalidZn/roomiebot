@@ -86,15 +86,30 @@ function processPostback(event) {
                     "text":"What do you want to do next?",
                     "buttons":[
                         {
-                            "type":"web_url",
-                            "url":"https://petersapparel.parseapp.com",
-                            "title":"Show Website"
-                        },
-                        {
-                            "type":"postback",
-                            "title":"Start Chatting",
-                            "payload":"USER_DEFINED_PAYLOAD"
-                        }
+                            type: "postback",
+                            title: "Plot",
+                            payload: "Plot"
+                        }, {
+                            type: "postback",
+                            title: "Rating",
+                            payload: "Incorrect"
+                        }, {
+                            type: "postback",
+                            title: "Cast",
+                            payload: "Cast"
+                        }, {
+                            type: "postback",
+                            title: "Director",
+                            payload: "Director"
+                        }, {
+                            type: "postback",
+                            title: "Date",
+                            payload: "Date"
+                        }, {
+                            type: "postback",
+                            title: "Runtime",
+                            payload: "Runtime"
+                    }
                     ]
                 }
             }
