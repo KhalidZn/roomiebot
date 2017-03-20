@@ -93,8 +93,8 @@ function processPostback(event) {
                             "payload":"cast"
                         } ,{
                             "type":"postback",
-                            "title":"Director",
-                            "payload":"director"
+                            "title":"Date",
+                            "payload":"date"
                         }
                     ]
                 }
