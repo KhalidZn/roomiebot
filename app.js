@@ -77,23 +77,27 @@ function processPostback(event) {
         });
     } else if (payload === "Correct") {
         message = {
-            attachment: {
-                type: "template",
-                payload: {
-                    template_type: "generic",
-                    text:"Awesome! What would you like to find out?",
-                    elements: [{
-                        buttons: [{
-                            type: "postback",
-                            title: "Plot",
-                            payload: "Plot"
-                        }, {
-                            type: "postback",
-                            title: "Rating",
-                            payload: "Incorrect"
-
-                        }]
-                    }]
+            "attachment":{
+                "type":"template",
+                "payload":{
+                    "template_type":"button",
+                    "text":"What do you want to do next?",
+                    "buttons":[
+                        {
+                            "type":"postback",
+                            "title":"Rating",
+                            "payload":"rat"
+                        },
+                        {
+                            "type":"postback",
+                            "title":"Start Chatting",
+                            "payload":"USER_DEFINED_PAYLOAD"
+                        },{
+                            "type":"postback",
+                            "title":"Cast",
+                            "payload":"cast"
+                        }
+                    ]
                 }
             }
         };
