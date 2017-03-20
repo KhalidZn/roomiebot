@@ -76,16 +76,14 @@ function processPostback(event) {
             sendMessage(senderId, {text: message});
         });
     } else if (payload === "Correct") {
-
-
         message = {
-            "attachment":{
-                "type":"template",
-                "payload":{
-                    "template_type":"button",
-                    "text":"What do you want to do next?",
-                    "buttons":[
-                        {
+            attachment: {
+                type: "template",
+                payload: {
+                    template_type: "generic",
+                    text:"Awesome! What would you like to find out?",
+                    elements: [{
+                        buttons: [{
                             type: "postback",
                             title: "Plot",
                             payload: "Plot"
@@ -109,13 +107,12 @@ function processPostback(event) {
                             type: "postback",
                             title: "Runtime",
                             payload: "Runtime"
-                    }
-                    ]
+                        }]
+                    }]
                 }
             }
         };
-
-        sendMessage(senderId, message);
+        sendMessage(senderId,message);
     } else if (payload === "Incorrect") {
         sendMessage(senderId, {text: "Oops! Sorry about that. Try using the exact title of the movie"});
     }
