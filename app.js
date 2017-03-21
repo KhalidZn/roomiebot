@@ -81,20 +81,20 @@ function processPostback(event) {
                 "type":"template",
                 "payload":{
                     "template_type":"button",
-                    "text":"What do you want to do next?",
+                    "text":"Great! what do you want to know about it?",
                     "buttons":[
                         {
                             "type":"postback",
-                            "title":"Rating",
-                            "payload":"rating"
+                            "title":"Director/Actors",
+                            "payload":"D/A"
                         }, {
                             "type":"postback",
-                            "title":"Cast",
-                            "payload":"cast"
+                            "title":"Rating/Date",
+                            "payload":"R/D"
                         } ,{
                             "type":"postback",
-                            "title":"Date",
-                            "payload":"date"
+                            "title":"Details/Runtime",
+                            "payload":"D/R"
                         }
                     ]
                 }
@@ -103,7 +103,17 @@ function processPostback(event) {
         sendMessage(senderId,message);
     } else if (payload === "Incorrect") {
         sendMessage(senderId, {text: "Oops! Sorry about that. Try using the exact title of the movie"});
+    }else if (payload === "D/A") {
+        getMovieDetail(senderId, "director");
+        getMovieDetail(senderId, "cast");
+    }else if (payload === "R/D") {
+        getMovieDetail(senderId, "rating");
+        getMovieDetail(senderId, "date");
+    }else if (payload === "D/R") {
+        getMovieDetail(senderId, "plot");
+        getMovieDetail(senderId, "runtime");
     }
+
 }
 
 function processMessage(event) {
