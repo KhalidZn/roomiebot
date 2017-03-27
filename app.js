@@ -237,7 +237,7 @@ function getMovieDetail(userId, field) {
                     "payload":"runtime"
                 }
 
-            ]});
+            ],text:"Or search for another movie"});
         }
     });
 }
