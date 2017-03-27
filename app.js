@@ -76,18 +76,19 @@ function processPostback(event) {
             sendMessage(senderId, {text: message});
         });
     } else if (payload === "Correct") {
-        message = {
-            "text":"Pick a color:",
-            "quick_replies":[
+
+        message={
+            "text":"Great! what do you want to know about it?",
+                "quick_replies":[
                 {
-                    "content_type":"text",
-                    "title":"Red",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+                    "type":"postback",
+                    "title":"Director/Actors",
+                    "payload":"D/A"
                 },
                 {
-                    "content_type":"text",
-                    "title":"Green",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN"
+                    "type":"postback",
+                    "title":"Rating/Date",
+                    "payload":"R/D"
                 }
             ]
         };
