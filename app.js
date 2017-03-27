@@ -82,10 +82,30 @@ function processPostback(event) {
                 "quick_replies":[
                 {
                     "content_type":"text",
-                    "type":"postback",
-                    "title":"Director/Actors",
-                    "payload":"D/A"
+                    "title":"Director",
+                    "payload":"director"
+                },{
+                        "content_type":"text",
+                        "title":"Actors",
+                        "payload":"cast"
+                }, {
+                        "content_type":"text",
+                        "title":"Rating",
+                        "payload":"rating"
+                },{
+                        "content_type":"text",
+                        "title":"Plot",
+                        "payload":"plot"
+                }, {
+                        "content_type":"text",
+                        "title":"Date",
+                        "payload":"date"
+                },{
+                        "content_type":"text",
+                        "title":"Runtime",
+                        "payload":"runtime"
                 }
+
             ]
         };
         sendMessage(senderId,message);
