@@ -111,17 +111,7 @@ function processPostback(event) {
         sendMessage(senderId,message);
     } else if (payload === "Incorrect") {
         sendMessage(senderId, {text: "Oops! Sorry about that. Try using the exact title of the movie"});
-    }else if (payload === "D/A") {
-        getMovieDetail(senderId, "director");
-        getMovieDetail(senderId, "cast");
-    }else if (payload === "R/D") {
-        getMovieDetail(senderId, "rating");
-        getMovieDetail(senderId, "date");
-    }else if (payload === "D/R") {
-        getMovieDetail(senderId, "plot");
-        getMovieDetail(senderId, "runtime");
     }
-
 }
 
 function processMessage(event) {
@@ -220,7 +210,7 @@ function getMovieDetail(userId, field) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
         } else {
-            sendMessage(userId, {text: field+movie[field], "quick_replies":[
+            sendMessage(userId, {text: field+" :"+movie[field], "quick_replies":[
                 {
                     "content_type":"text",
                     "title":"Director",
