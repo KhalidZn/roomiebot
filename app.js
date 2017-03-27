@@ -81,14 +81,9 @@ function processPostback(event) {
             "text":"Great! what do you want to know about it?",
                 "quick_replies":[
                 {
-                    "type":"postback",
+                    "content_type":"text",
                     "title":"Director/Actors",
                     "payload":"D/A"
-                },
-                {
-                    "type":"postback",
-                    "title":"Rating/Date",
-                    "payload":"R/D"
                 }
             ]
         };
