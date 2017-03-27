@@ -220,7 +220,34 @@ function getMovieDetail(userId, field) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
         } else {
-            sendMessage(userId, {text: movie[field]});
+            sendMessage(userId, {text: movie[field], "quick_replies":[
+                {
+                    "content_type":"text",
+                    "title":"Director",
+                    "payload":"director"
+                },{
+                    "content_type":"text",
+                    "title":"Actors",
+                    "payload":"cast"
+                }, {
+                    "content_type":"text",
+                    "title":"Rating",
+                    "payload":"rating"
+                },{
+                    "content_type":"text",
+                    "title":"Plot",
+                    "payload":"plot"
+                }, {
+                    "content_type":"text",
+                    "title":"Date",
+                    "payload":"date"
+                },{
+                    "content_type":"text",
+                    "title":"Runtime",
+                    "payload":"runtime"
+                }
+
+            ]});
         }
     });
 }
