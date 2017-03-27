@@ -210,7 +210,7 @@ function getMovieDetail(userId, field) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
         } else {
-            sendMessage(userId, {text: field+" : "+movie[field]+"\n you can search for another movie ", "quick_replies":[
+            sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":[
                 {
                     "content_type":"text",
                     "title":"Director",
