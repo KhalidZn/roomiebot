@@ -210,7 +210,7 @@ function getMovieDetail(userId, field) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
         } else {
-            sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":[
+            sendMessage(userId, {text: field+" : "+movie[field]+"<br>br", "quick_replies":[
                 {
                     "content_type":"text",
                     "title":"Director",
@@ -237,7 +237,7 @@ function getMovieDetail(userId, field) {
                     "payload":"runtime"
                 }
 
-            ],text:"Or search for another movie"});
+            ]});
         }
     });
 }
