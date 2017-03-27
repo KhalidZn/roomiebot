@@ -86,7 +86,7 @@ function processPostback(event) {
                     "payload":"director"
                 },{
                         "content_type":"text",
-                        "title":"Actors",
+                        "title":"Cast",
                         "payload":"cast"
                 }, {
                         "content_type":"text",
@@ -220,7 +220,7 @@ function getMovieDetail(userId, field) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
         } else {
-            sendMessage(userId, {text: movie[field], "quick_replies":[
+            sendMessage(userId, {text: field+movie[field], "quick_replies":[
                 {
                     "content_type":"text",
                     "title":"Director",
