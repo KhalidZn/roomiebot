@@ -77,28 +77,19 @@ function processPostback(event) {
         });
     } else if (payload === "Correct") {
         message = {
-            "attachment":{
-                "type":"template",
-                "payload":{
-                    "template_type":"button",
-                    "text":"Great! what do you want to know about it?",
-                    "buttons":[
-                        {
-                            "type":"postback",
-                            "title":"Director/Actors",
-                            "payload":"D/A"
-                        }, {
-                            "type":"postback",
-                            "title":"Rating/Date",
-                            "payload":"R/D"
-                        } ,{
-                            "type":"postback",
-                            "title":"Details/Runtime",
-                            "payload":"D/R"
-                        }
-                    ]
+            "text":"Pick a color:",
+            "quick_replies":[
+                {
+                    "content_type":"text",
+                    "title":"Red",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+                },
+                {
+                    "content_type":"text",
+                    "title":"Green",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN"
                 }
-            }
+            ]
         };
         sendMessage(senderId,message);
     } else if (payload === "Incorrect") {
