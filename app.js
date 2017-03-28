@@ -220,11 +220,21 @@ function quickReplies(field){
     return reply;
 }
 function getMovieDetail(userId, field) {
+    var fields = [ 'Director', 'Cast', 'Rating','Plot','Date','Runtime' ];
+
     Movie.findOne({user_id: userId}, function(err, movie) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
         } else {
-            sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":+quickReplies(field)});
+            var reply=[];
+            for(var i=0;i<fields.length;i++) {
+                reply.push({
+                    "content_type":"text",
+                    "title":+fields[i],
+                    "payload":+fields[i]
+                })
+            }
+                sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":reply});
         }
     });
 }
