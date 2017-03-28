@@ -204,40 +204,27 @@ function findMovie(userId, movieTitle) {
         }
     });
 }
-
+function quickReplies(field){
+    var reply=[];
+    var fields = [ 'Director', 'Cast', 'Rating','Plot','Date','Runtime' ];
+    for(var i=0;i<fields.length;i++){
+        if(fields[i]=field) continue;
+        else {
+            reply.push({
+                "content_type":"text",
+                "title":+field,
+                "payload":+field
+            })
+        }
+    }
+    return reply;
+}
 function getMovieDetail(userId, field) {
     Movie.findOne({user_id: userId}, function(err, movie) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
         } else {
-            sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":[
-                {
-                    "content_type":"text",
-                    "title":"Director",
-                    "payload":"director"
-                },{
-                    "content_type":"text",
-                    "title":"Cast",
-                    "payload":"cast"
-                }, {
-                    "content_type":"text",
-                    "title":"Rating",
-                    "payload":"rating"
-                },{
-                    "content_type":"text",
-                    "title":"Plot",
-                    "payload":"plot"
-                }, {
-                    "content_type":"text",
-                    "title":"Date",
-                    "payload":"date"
-                },{
-                    "content_type":"text",
-                    "title":"Runtime",
-                    "payload":"runtime"
-                }
-
-            ]});
+            sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":quickReplies(null)});
         }
     });
 }
