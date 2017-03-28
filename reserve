@@ -258,3 +258,32 @@ function sendMessage(recipientId, message) {
                 }
             }
         };
+
+         sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":[
+                        {
+                            "content_type":"text",
+                            "title":"Director",
+                            "payload":"director"
+                        },{
+                            "content_type":"text",
+                            "title":"Cast",
+                            "payload":"cast"
+                        }, {
+                            "content_type":"text",
+                            "title":"Rating",
+                            "payload":"rating"
+                        },{
+                            "content_type":"text",
+                            "title":"Plot",
+                            "payload":"plot"
+                        }, {
+                            "content_type":"text",
+                            "title":"Date",
+                            "payload":"date"
+                        },{
+                            "content_type":"text",
+                            "title":"Runtime",
+                            "payload":"runtime"
+                        }
+
+                    ]});

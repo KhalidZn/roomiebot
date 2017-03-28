@@ -208,14 +208,14 @@ function quickReplies(field){
     var reply=[];
     var fields = [ 'Director', 'Cast', 'Rating','Plot','Date','Runtime' ];
     for(var i=0;i<fields.length;i++){
-        if(fields[i]=field) continue;
-        else {
+        //        if(fields[i]=field) continue;
+        //else {
             reply.push({
                 "content_type":"text",
                 "title":+fields[i],
                 "payload":+fields[i]
             })
-        }
+        //}
     }
     return reply;
 }
