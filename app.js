@@ -229,13 +229,17 @@ function getMovieDetail(userId, field) {
 
             if(field=='poster'){
                 sendMessage(userId, {
-                    "attachment":{
-                    "type":"image",
-                    "payload":{
-                        "url":movie[poster_url]
-                    }
-                },
-                    "quick_replies":reply
+                        attachment: {
+                            type: "template",
+                            payload: {
+                                template_type: "generic",
+                                elements: [{
+                                    image_url: movie[poster_url] === "N/A" ? "http://placehold.it/350x150" : movie[poster_url],
+                                    "quick_replies":reply
+                                }]
+                            }
+                        }
+
                 });
             }else {
                 sendMessage(userId, {
