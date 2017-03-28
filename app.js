@@ -229,7 +229,7 @@ function getMovieDetail(userId, field) {
             var reply=[];
             for(var i=0;i<fields.length;i++) {
                 if(fields[i]=field) continue;
-                else reply.push({
+                 reply.push({
                     "content_type":"text",
                     "title":fields[i],
                     "payload":fields[i]
