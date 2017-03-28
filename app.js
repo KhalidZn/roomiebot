@@ -229,15 +229,15 @@ function getMovieDetail(userId, field) {
             var reply=[
                 {
                     "content_type":"text",
-                    "title":+fields[2],
-                    "payload":+fields[2]
+                    "title":fields[2],
+                    "payload":fields[2]
                 }
             ]
             //for(var i=0;i<fields.length;i++) {
                 reply.push({
                     "content_type":"text",
-                    "title":+fields[0],
-                    "payload":+fields[0]
+                    "title":fields[0],
+                    "payload":fields[0]
                 });
            // }
                 sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":reply});
