@@ -82,7 +82,7 @@ function processPostback(event) {
                 "quick_replies":[
                 {
                     "content_type":"text",
-                    "title":"Director",
+                    "title":"Creator",
                     "payload":"director"
                 },{
                         "content_type":"text",
@@ -242,6 +242,13 @@ function getMovieDetail(userId, field) {
             if(field=='director' && movie["type"]=="series"){
                 sendMessage(userId, {
                     text: "Creator : " + movie["writer"],
+                    "quick_replies": reply
+                });
+            }
+
+            if(field=='director' && movie["type"]=="movie"){
+                sendMessage(userId, {
+                    text: "Creator : " + movie["director"],
                     "quick_replies": reply
                 });
             }
