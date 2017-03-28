@@ -226,7 +226,13 @@ function getMovieDetail(userId, field) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
         } else {
-            var reply=[];
+            var reply=[
+                {
+                    "content_type":"text",
+                    "title":+fields[2],
+                    "payload":+fields[2]
+                }
+            ]
             //for(var i=0;i<fields.length;i++) {
                 reply.push({
                     "content_type":"text",
