@@ -252,8 +252,8 @@ function getMovieDetail(userId, field) {
         } else {
             var index = reply.indexOf({
                 "content_type":"text",
-                "title":field,
-                "payload":field
+                "title":"runtime",
+                "payload":"runtime"
             });
             if (index > -1) {
                 reply.splice(index, 1);
