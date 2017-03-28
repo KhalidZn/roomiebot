@@ -226,27 +226,14 @@ function getMovieDetail(userId, field) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
         } else {
-            var reply=[ {
-                "content_type":"text",
-                "title":fields[1],
-                "payload":fields[1]
-            },{
-                "content_type":"text",
-                "title":fields[2],
-                "payload":fields[2]
-            }];
-            reply.push( {
-                "content_type":"text",
-                "title":fields[4],
-                "payload":fields[4]
-            });
-           /* for(var i=0;i<fields.length;i++) {
+            var reply=[];
+            for(var i=0;i<fields.length;i++) {
                 reply.push({
                     "content_type":"text",
                     "title":+fields[i],
                     "payload":+fields[i]
                 });
-            }*/
+            }
                 sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":reply});
         }
     });
