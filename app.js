@@ -227,22 +227,12 @@ function getMovieDetail(userId, field) {
                 });
             }
 
-            if(field=='poster'){
-                sendMessage(userId, {
-                    "attachment":{
-                    "type":"image",
-                    "payload":{
-                        "url":movie[poster_url]
-                    }
-                },
-                    "quick_replies":reply
-                });
-            }else {
+
                 sendMessage(userId, {
                     text: field.charAt(0).toUpperCase() + field.slice(1) + " : " + movie[field],
                     "quick_replies": reply
                 });
-            }
+
         }
     });
 }
