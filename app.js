@@ -235,6 +235,11 @@ function getMovieDetail(userId, field) {
                 "title":"Cast",
                 "payload":"cast"
             }];
+            reply.push( {
+                "content_type":"text",
+                "title":"test",
+                "payload":"test"
+            });
            /* for(var i=0;i<fields.length;i++) {
                 reply.push({
                     "content_type":"text",
