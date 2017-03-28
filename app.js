@@ -184,7 +184,7 @@ function findMovie(userId, movieTitle) {
                                     template_type: "generic",
                                     elements: [{
                                         title: movieObj.Title,
-                                        subtitle: "Is this what you are looking for?",
+                                        subtitle: movieObj.type+" imdb : "+movieObj.rating+"\nIs this what you are looking for?",
                                         image_url: movieObj.Poster === "N/A" ? "http://placehold.it/350x150" : movieObj.Poster,
                                         buttons: [{
                                             type: "postback",
@@ -212,7 +212,7 @@ function findMovie(userId, movieTitle) {
     });
 }
 function getMovieDetail(userId, field) {
-    var fields = [ 'Director', 'Writer','Cast', 'Rating','Plot','Date','Runtime','Awards','Type','Poster' ];
+    var fields = [ 'Director', 'Writer','Cast', 'Rating','Plot','Awards','Date','Runtime','Type','Poster' ];
     Movie.findOne({user_id: userId}, function(err, movie) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
