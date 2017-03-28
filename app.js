@@ -228,29 +228,15 @@ function getMovieDetail(userId, field) {
             }
 
             if(field=='poster'){
-                message = {
-                    attachment: {
-                        type: "template",
-                        payload: {
-                            template_type: "generic",
-                            elements: [{
-                                title: movie["title"],
-                                subtitle: "Is this what you are looking for?",
-                                image_url: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg4NzEyNzQ5OF5BMl5BanBnXkFtZTYwNTY3NDg4._V1._CR24,0,293,443_SX89_AL_.jpg_V1_SX300.jpg",
-                                buttons: [{
-                                    type: "postback",
-                                    title: "Yes",
-                                    payload: "Correct"
-                                }, {
-                                    type: "postback",
-                                    title: "No",
-                                    payload: "Incorrect"
-                                }]
-                            }]
+                sendMessage(userId, {
+                    "attachment":{
+                    "type":"image",
+                    "payload":{
+                        "url":"https://petersapparel.com/img/shirt.png"
                         }
-                    }
-                };
-                sendMessage(userId, message);
+                    },"quick_replies": reply
+
+                });
 
             }else {
                 sendMessage(userId, {
