@@ -136,6 +136,9 @@ function processMessage(event) {
                 case "director":
                 case "cast":
                 case "rating":
+                case "awards":
+                case "writer":
+                case "type":
                     getMovieDetail(senderId, formattedMsg);
                     break;
 
@@ -165,6 +168,7 @@ function findMovie(userId, movieTitle) {
                     writer:movieObj.Writer,
                     cast: movieObj.Actors,
                     rating: movieObj.imdbRating,
+                    type:movieObj.Type,
                     poster_url:movieObj.Poster
                 };
                 var options = {upsert: true};
@@ -207,7 +211,7 @@ function findMovie(userId, movieTitle) {
     });
 }
 function getMovieDetail(userId, field) {
-    var fields = [ 'Director', 'Cast', 'Rating','Plot','Date','Runtime' ];
+    var fields = [ 'Director', 'Cast', 'Rating','Plot','Date','Runtime','Writer','Awards','Type' ];
     Movie.findOne({user_id: userId}, function(err, movie) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
