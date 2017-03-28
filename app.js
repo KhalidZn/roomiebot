@@ -212,8 +212,8 @@ function quickReplies(field){
         else {
             reply.push({
                 "content_type":"text",
-                "title":+field,
-                "payload":+field
+                "title":+fields[i],
+                "payload":+fields[i]
             })
         }
     }
