@@ -234,7 +234,7 @@ function getMovieDetail(userId, field) {
                     payload:{
                         "url":movie["poster_url"]
                         }
-                    }
+                    }, "quick_replies": reply
 
                 });
 
