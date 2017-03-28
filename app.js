@@ -238,7 +238,14 @@ function getMovieDetail(userId, field) {
 
                 });
 
-            }else {
+            }
+            if(field=='director' && movie["type"]=="series"){
+                sendMessage(userId, {
+                    text: "Creator : " + movie["writer"],
+                    "quick_replies": reply
+                });
+            }
+            else {
                 sendMessage(userId, {
                     text: field.charAt(0).toUpperCase() + field.slice(1) + " : " + movie[field],
                     "quick_replies": reply
