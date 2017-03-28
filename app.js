@@ -236,7 +236,7 @@ function getMovieDetail(userId, field) {
                             elements: [{
                                 title: movieObj.Title,
                                 subtitle: "Is this what you are looking for?",
-                                image_url: movie[poster_url]=== "N/A" ? "http://placehold.it/350x150" : movie[poster_url],
+                                image_url:"https://images-na.ssl-images-amazon.com/images/M/MV5BMTg4NzEyNzQ5OF5BMl5BanBnXkFtZTYwNTY3NDg4._V1._CR24,0,293,443_SX89_AL_.jpg_V1_SX300.jpg",
                                 buttons: [{
                                     type: "postback",
                                     title: "Yes",
