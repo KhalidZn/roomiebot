@@ -245,13 +245,6 @@ function getMovieDetail(userId, field) {
                     "quick_replies": reply
                 });
             }
-
-            if(field=='director' && movie["type"]=="movie"){
-                sendMessage(userId, {
-                    text: "Creator : " + movie["director"],
-                    "quick_replies": reply
-                });
-            }
             else {
                 sendMessage(userId, {
                     text: field.charAt(0).toUpperCase() + field.slice(1) + " : " + movie[field],
