@@ -227,7 +227,7 @@ function getMovieDetail(userId, field) {
         } else {
             var reply=[];
             for(var i=0;i<fields.length;i++) {
-                if(fields[i].toLocaleLowerCase()==field) continue;
+                if(fields[i].toLowerCase()==field) continue;
                 else reply.push({
                     "content_type":"text",
                     "title":fields[i],
