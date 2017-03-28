@@ -219,7 +219,7 @@ function getMovieDetail(userId, field) {
                     "payload":fields[i]
                 });
             }
-                sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":reply});
+                sendMessage(userId, {text: field.charAt(0).toUpperCase() + field.slice(1)+" : "+movie[field], "quick_replies":reply});
         }
     });
 }
