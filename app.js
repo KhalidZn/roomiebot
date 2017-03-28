@@ -229,18 +229,15 @@ function getMovieDetail(userId, field) {
 
             if(field=='poster'){
                 sendMessage(userId, {
-                        attachment: {
-                            type: "template",
-                            payload: {
-                                template_type: "generic",
-                                elements: [{
-                                    image_url: movie[field] === "N/A" ? "http://placehold.it/350x150" : movie[field],
-                                    "quick_replies":reply
-                                }]
-                            }
+                    "attachment":{
+                    "type":"image",
+                    "payload":{
+                        "url":"https://petersapparel.com/img/shirt.png"
                         }
+                    }
 
                 });
+
             }else {
                 sendMessage(userId, {
                     text: field.charAt(0).toUpperCase() + field.slice(1) + " : " + movie[field],
