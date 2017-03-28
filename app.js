@@ -228,7 +228,27 @@ function getMovieDetail(userId, field) {
             }
 
             if(field=='poster'){
-                sendMessage(userId, {"text":"poster clicked"
+                sendMessage(userId, {
+                    attachment: {
+                        type: "template",
+                        payload: {
+                            template_type: "generic",
+                            elements: [{
+                                title: movieObj.Title,
+                                subtitle: "Is this what you are looking for?",
+                                image_url: movie[poster_url]=== "N/A" ? "http://placehold.it/350x150" : movie[poster_url],
+                                buttons: [{
+                                    type: "postback",
+                                    title: "Yes",
+                                    payload: "Correct"
+                                }, {
+                                    type: "postback",
+                                    title: "No",
+                                    payload: "Incorrect"
+                                }]
+                            }]
+                        }
+                    }
 
                 });
 
