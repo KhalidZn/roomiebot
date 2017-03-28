@@ -184,7 +184,7 @@ function findMovie(userId, movieTitle) {
                                     template_type: "generic",
                                     elements: [{
                                         title: movieObj.Title,
-                                        subtitle: movieObj.type+" imdb : "+movieObj.rating+"\nIs this what you are looking for?",
+                                        subtitle: movieObj.Type+" imdb : "+movieObj.imdbRating+"\nIs this what you are looking for?",
                                         image_url: movieObj.Poster === "N/A" ? "http://placehold.it/350x150" : movieObj.Poster,
                                         buttons: [{
                                             type: "postback",
