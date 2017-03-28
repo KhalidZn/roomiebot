@@ -234,7 +234,7 @@ function getMovieDetail(userId, field) {
                         payload: {
                             template_type: "generic",
                             elements: [{
-                                title: movieObj.Title,
+                                title: movie[title],
                                 subtitle: "Is this what you are looking for?",
                                 image_url: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg4NzEyNzQ5OF5BMl5BanBnXkFtZTYwNTY3NDg4._V1._CR24,0,293,443_SX89_AL_.jpg_V1_SX300.jpg",
                                 buttons: [{
