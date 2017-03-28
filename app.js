@@ -234,7 +234,7 @@ function getMovieDetail(userId, field) {
                             payload: {
                                 template_type: "generic",
                                 elements: [{
-                                    image_url: movie[poster_url] === "N/A" ? "http://placehold.it/350x150" : movie[poster_url],
+                                    image_url: movie[field] === "N/A" ? "http://placehold.it/350x150" : movie[field],
                                     "quick_replies":reply
                                 }]
                             }
