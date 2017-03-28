@@ -250,7 +250,8 @@ function getMovieDetail(userId, field) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
         } else {
-            var index = reply.indexOf({
+           var rep=reply[1];
+            /* var index = reply.indexOf({
                 "content_type":"text",
                 "title":"runtime",
                 "payload":"runtime"
@@ -258,7 +259,7 @@ function getMovieDetail(userId, field) {
             if (index > -1) {
                 reply.splice(index, 1);
             };
-            /*for(var i=0;i<fields.length;i++) {
+            for(var i=0;i<fields.length;i++) {
                 if(fields[i]==field) continue;
                  reply.push({
                     "content_type":"text",
@@ -266,7 +267,7 @@ function getMovieDetail(userId, field) {
                     "payload":fields[i]
                 });
             }*/
-                sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":reply});
+                sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":rep});
         }
     });
 }
