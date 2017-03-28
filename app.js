@@ -229,12 +229,12 @@ function getMovieDetail(userId, field) {
 
             if(field=='poster'){
                 sendMessage(userId, {
-                    "attachment":{
-                    "type":"image",
-                    "payload":{
-                        "url":"https://petersapparel.com/img/shirt.png"
+                    attachment:{
+                    type:"image",
+                    payload:{
+                        "url":movie["poster_url"]
                         }
-                    },"quick_replies": reply
+                    }
 
                 });
 
