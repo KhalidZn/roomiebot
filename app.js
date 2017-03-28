@@ -234,7 +234,7 @@ function getMovieDetail(userId, field) {
                     "payload":fields[i]
                 });
             }
-                sendMessage(userId, {text: field+" : "+movie[field]+"\n you can search for another movie or get more details about this one", "quick_replies":reply});
+                sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":reply});
         }
     });
 }
