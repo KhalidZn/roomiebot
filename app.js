@@ -157,10 +157,12 @@ function findMovie(userId, movieTitle) {
                 var update = {
                     user_id: userId,
                     title: movieObj.Title,
+                    awards:movieObj.Awards,
                     plot: movieObj.Plot,
                     date: movieObj.Released,
                     runtime: movieObj.Runtime,
                     director: movieObj.Director,
+                    writer:movieObj.Writer,
                     cast: movieObj.Actors,
                     rating: movieObj.imdbRating,
                     poster_url:movieObj.Poster
