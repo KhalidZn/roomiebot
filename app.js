@@ -220,32 +220,16 @@ function quickReplies(field){
     return reply;
 }
 function getMovieDetail(userId, field) {
-    //var fields = [ 'Director', 'Cast', 'Rating','Plot','Date','Runtime' ];
-    var reply=[ {
-        "content_type":"text",
-        "title":"director",
-        "payload":"director"
-    },{
-        "content_type":"text",
-        "title":"cast",
-        "payload":"cast"
-    }, {
-        "content_type":"text",
-        "title":"rating",
-        "payload":"rating"
-    },{
-        "content_type":"text",
-        "title":"plot",
-        "payload":"plot"
-    }, {
-        "content_type":"text",
-        "title":"date",
-        "payload":"date"
-    },{
-        "content_type":"text",
-        "title":"runtime",
-        "payload":"runtime"
-    }];
+    var fields = [ 'Director', 'Cast', 'Rating','Plot','Date','Runtime' ];
+    var reply=[];
+    for(var i=0;i<fields.length;i++) {
+        //if(fields[i]==field) continue;
+        reply.push({
+            "content_type":"text",
+            "title":fields[i],
+            "payload":fields[i]
+        });
+    }
     Movie.findOne({user_id: userId}, function(err, movie) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
