@@ -228,12 +228,12 @@ function getMovieDetail(userId, field) {
         } else {
             var reply=[ {
                 "content_type":"text",
-                "title":"Director",
-                "payload":"director"
+                "title":fields[1],
+                "payload":fields[1]
             },{
                 "content_type":"text",
-                "title":"Cast",
-                "payload":"cast"
+                "title":fields[2],
+                "payload":fields[2]
             }];
             reply.push( {
                 "content_type":"text",
