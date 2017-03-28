@@ -224,7 +224,7 @@ function getMovieDetail(userId, field) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
         } else {
-            sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":quickReplies(field)});
+            sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":+quickReplies(field)});
         }
     });
 }
