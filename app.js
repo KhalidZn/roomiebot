@@ -221,37 +221,20 @@ function quickReplies(field){
 }
 function getMovieDetail(userId, field) {
     var fields = [ 'Director', 'Cast', 'Rating','Plot','Date','Runtime' ];
-    var reply=[];
-    for(var i=0;i<fields.length;i++) {
-        //if(fields[i]==field) continue;
-        reply.push({
-            "content_type":"text",
-            "title":fields[i],
-            "payload":fields[i]
-        });
-    }
     Movie.findOne({user_id: userId}, function(err, movie) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
         } else {
-           var rep=reply[1];
-            /* var index = reply.indexOf({
-                "content_type":"text",
-                "title":"runtime",
-                "payload":"runtime"
-            });
-            if (index > -1) {
-                reply.splice(index, 1);
-            };
+            var reply=[];
             for(var i=0;i<fields.length;i++) {
-                if(fields[i]==field) continue;
-                 reply.push({
+                //if(fields[i]==field) continue;
+                reply.push({
                     "content_type":"text",
                     "title":fields[i],
                     "payload":fields[i]
                 });
-            }*/
-                sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":rep});
+            }
+                sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":reply});
         }
     });
 }
