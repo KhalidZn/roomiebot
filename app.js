@@ -82,7 +82,7 @@ function processPostback(event) {
                 "quick_replies":[
                 {
                     "content_type":"text",
-                    "title":"Creator",
+                    "title":"Director",
                     "payload":"director"
                 },{
                         "content_type":"text",
