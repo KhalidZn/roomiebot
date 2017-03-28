@@ -226,10 +226,18 @@ function getMovieDetail(userId, field) {
                     "payload":fields[i]
                 });
             }
-                sendMessage(userId, {text: field.charAt(0).toUpperCase() + field.slice(1)+" : "+movie[field],
+
+            if(field=='poster'){
+                sendMessage(userId, {
+                    image_url: movie[poster_url] === "N/A" ? "http://placehold.it/350x150" : movie[poster_url],
                     "quick_replies":reply
                 });
-
+            }else {
+                sendMessage(userId, {
+                    text: field.charAt(0).toUpperCase() + field.slice(1) + " : " + movie[field],
+                    "quick_replies": reply
+                });
+            }
         }
     });
 }
