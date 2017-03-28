@@ -227,13 +227,13 @@ function getMovieDetail(userId, field) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
         } else {
             var reply=[];
-            for(var i=0;i<fields.length;i++) {
+            //for(var i=0;i<fields.length;i++) {
                 reply.push({
                     "content_type":"text",
-                    "title":+fields[i],
-                    "payload":+fields[i]
+                    "title":+fields[0],
+                    "payload":+fields[0]
                 });
-            }
+           // }
                 sendMessage(userId, {text: field+" : "+movie[field], "quick_replies":reply});
         }
     });
