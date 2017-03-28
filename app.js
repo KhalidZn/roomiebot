@@ -228,7 +228,7 @@ function getMovieDetail(userId, field) {
             }
             if(field=='poster'){
                 sendMessage(userId, {
-                    image_url: movieObj.Poster === "N/A" ? "http://placehold.it/350x150" : movie[poster_url],
+                    image_url: movie[poster_url] === "N/A" ? "http://placehold.it/350x150" : movie[poster_url],
                     "quick_replies":reply
                 });
             }else {
