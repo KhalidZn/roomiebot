@@ -237,8 +237,8 @@ function getMovieDetail(userId, field) {
             }];
             reply.push( {
                 "content_type":"text",
-                "title":"test",
-                "payload":"test"
+                "title":fields[4],
+                "payload":fields[4]
             });
            /* for(var i=0;i<fields.length;i++) {
                 reply.push({
