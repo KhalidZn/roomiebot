@@ -211,7 +211,7 @@ function findMovie(userId, movieTitle) {
     });
 }
 function getMovieDetail(userId, field) {
-    var fields = [ 'Director', 'Cast', 'Rating','Plot','Date','Runtime','Writer','Awards','Type' ];
+    var fields = [ 'Director', 'Writer','Cast', 'Rating','Plot','Date','Runtime','Awards','Type' ];
     Movie.findOne({user_id: userId}, function(err, movie) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
@@ -225,7 +225,10 @@ function getMovieDetail(userId, field) {
                     "payload":fields[i]
                 });
             }
-                sendMessage(userId, {text: field.charAt(0).toUpperCase() + field.slice(1)+" : "+movie[field], "quick_replies":reply});
+                sendMessage(userId, {text: field.charAt(0).toUpperCase() + field.slice(1)+" : "+movie[field],
+                    "quick_replies":reply,
+                    image_url: movieObj.Poster === "N/A" ? "http://placehold.it/350x150" : movie[poster_url],
+                });
         }
     });
 }
