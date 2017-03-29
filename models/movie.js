@@ -10,6 +10,7 @@ var MovieSchema = new Schema({
   runtime: {type: String},
   director: {type: String},
   writer: {type: String},
+  genre: {type:String},
   cast: {type: String},
   rating: {type: String},
   type:{type:String},

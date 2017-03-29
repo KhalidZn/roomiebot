@@ -102,8 +102,8 @@ function processPostback(event) {
                         "payload":"date"
                 },{
                         "content_type":"text",
-                        "title":"Runtime",
-                        "payload":"runtime"
+                        "title":"Genre",
+                        "payload":"genre"
                 }
 
             ]
@@ -168,6 +168,7 @@ function findMovie(userId, movieTitle) {
                     director: movieObj.Director,
                     writer:movieObj.Writer,
                     cast: movieObj.Actors,
+                    genre:movieObj.Genre,
                     rating: movieObj.imdbRating,
                     type:movieObj.Type,
                     poster_url:movieObj.Poster
@@ -212,7 +213,7 @@ function findMovie(userId, movieTitle) {
     });
 }
 function getMovieDetail(userId, field) {
-    var fields = [ 'Director', 'Writer','Cast', 'Rating','Plot','Awards','Date','Runtime','Type','Poster' ];
+    var fields = [ 'Director', 'Writer','Cast', 'Genre','Rating','Plot','Awards','Date','Runtime','Type','Poster' ];
     Movie.findOne({user_id: userId}, function(err, movie) {
         if(err) {
             sendMessage(userId, {text: "Something went wrong. Try again"});
