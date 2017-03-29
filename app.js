@@ -140,6 +140,7 @@ function processMessage(event) {
                 case "writer":
                 case "type":
                 case "poster":
+                case "genre":
                     getMovieDetail(senderId, formattedMsg);
                     break;
 
